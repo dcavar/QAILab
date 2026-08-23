@@ -246,7 +246,7 @@ Relevant literature from Cognitive Science and Psychology:
 ## Team <a name="team"></a>
 
 | ------| ------- |
-| [Dr. Damir Cavar](https://damir.cavar.me/) | |
+| [Dr. Damir Cavar](https://www.linkedin.com/in/damircavar/) | |
 | [Khurrum Ali](https://www.linkedin.com/in/khurrum-ali-5ba6b81b9/?originalSubdomain=in) |[MacIntosh Phillips, John](https://github.com/jackp1377) |
 | [Ronit Jha](https://www.linkedin.com/in/ronitjha05/) | [Shane A. Sparks](https://www.linkedin.com/in/shane-sparks-a37832249/) |
 | [Sam Gray Miller](https://www.linkedin.com/in/samsterjam/) | |
