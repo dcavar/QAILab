@@ -5,14 +5,14 @@ Created: [Damir Cavar], 2023-06-12
 Last change: [Damir Cavar], 2026-08-18
 
 
-**The Quantum AI Study Group meetings during the Fall Semester of 2026 are held in Luddy Hall BL IF 0002 every Thursday from 5:30 to 7:00 PM.**
+**The Quantum AI Lab meetings during the Fall Semester of 2026 are held in Luddy Hall BL IF 0002 every Thursday from 5:30 to 7:00 PM.**
 
-See the public calendar with all the meeting times and details: [AI &amp; NLP Lab and Quantum AI Study Group Event Calendar](https://calendar.google.com/calendar/embed?src=3h9o18o7i82tjmmt5q2j3qgkj8%40group.calendar.google.com&ctz=America%2FNew_York).
+See the public calendar with all the meeting times and details: [AI &amp; NLP Lab and Quantum AI Lab Event Calendar](https://calendar.google.com/calendar/embed?src=3h9o18o7i82tjmmt5q2j3qgkj8%40group.calendar.google.com&ctz=America%2FNew_York).
 
 
 ## Schedule
 
-The topics to discuss, papers to read, or presentations to listen to during the Summer of 2026:
+The topics to discuss, papers to read, or presentations to listen to during Fall of 2026:
 
 | **Date** | **Topic** |
 | -------- | --------- |
@@ -248,7 +248,7 @@ Relevant literature from Cognitive Science and Psychology:
 | ------| ------- |
 | [Khurrum Ali](https://www.linkedin.com/in/khurrum-ali-5ba6b81b9/?originalSubdomain=in) |[MacIntosh Phillips, John](https://github.com/jackp1377) |
 | [Ronit Jha](https://www.linkedin.com/in/ronitjha05/) | [Shane A. Sparks](https://www.linkedin.com/in/shane-sparks-a37832249/) |
-| Sam Miller | |
+| Sam Gray Miller | |
 
 - [Full team and history](/team)
 
