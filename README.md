@@ -7,7 +7,9 @@ Last change: [Damir Cavar], 2026-08-23
 
 **The Quantum AI Lab meetings during the Fall Semester of 2026 are held in Luddy Hall BL IF 0002 every Thursday from 5:30 to 7:00 PM.**
 
-See the public calendar with all the meeting times and details: [AI &amp; NLP Lab and Quantum AI Lab Event Calendar](https://calendar.google.com/calendar/embed?src=3h9o18o7i82tjmmt5q2j3qgkj8%40group.calendar.google.com&ctz=America%2FNew_York).
+Please contact [Damir Cavar] if you are interested in joining the Quantum AI Lab or the AI &amp; NLP Lab meetings.
+
+See the public calendar with all the meeting times and details: [AI &amp; NLP Lab and Quantum AI Lab Event Calendar](https://calendar.google.com/calendar/embed?src=3h9o18o7i82tjmmt5q2j3qgkj8%40group.calendar.google.com&ctz=America%2FNew_York). More information on the [AI &amp; NLP Lab](https://ai-science-labs.org/) on its [website](https://ai-science-labs.org/).
 
 
 ## Schedule

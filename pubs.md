@@ -1,8 +1,8 @@
-# Quantum AI and Natural Language Processing (NLP) Lab Publications
+# Quantum AI Lab Publications
 
 Created: [Damir Cavar], 2025-06-02
 
-Last change: [Damir Cavar], 2026-04-19
+Last change: [Damir Cavar], 2026-08-23
 
 
 ## Panels
