@@ -1,16 +1,51 @@
-# Publications
+# Quantum AI Lab Publications
 
-- Cavar, D., Peter Sullivan, Shane Sparks, Sam Gray Miller, Ronit Jha, Ayomide Jeje, Yanin Charoenpomsawat (2026) [Training Language Models and Embeddings for Hybrid Classical/Quantum Computing](/pubs/MSLD_2026_CBIRD_Poster1.pdf). Poster presented at the [Midwest Speech and Language Days](https://nlp.cs.illinois.edu/msld.html) at the [University of Illinois in Urbana-Champaign](https://illinois.edu/).
+Created: [Damir Cavar], 2025-06-02
+
+Last change: [Damir Cavar], 2026-08-23
+
+
+## Panels
+
+- [QED-C Discussion and Panel on the Future of Quantum and AI](https://sri.zoomgov.com/webinar/register/9717374933023/WN_7AME7O63SZ6EhYan91HoRg#/registration) (March 12th, 2025) ([LinkedIn post](https://www.linkedin.com/posts/qedc_last-call-to-join-us-on-wednesday-march-activity-7304954073571549184-YCZe?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAv4XMUBX2S08vo53W0sGUSFpw814QpqqBs)) with [Cierra Choucair](https://www.linkedin.com/in/cierra-lunde/), [Alain Chancé](https://www.linkedin.com/in/alainchance/), [Damir Cavar](https://damir.cavar.me/), [Bob Coecke](https://www.linkedin.com/in/bob-coecke-9389627/), [Taha Selim](https://www.linkedin.com/in/tiselim/) (the recording is available on the [QED-C YouTube channel](https://youtu.be/5yBo3Jb71so?feature=shared))
+
+
+## Poster Presentations
+
+- Cavar, D., Peter Sullivan, Shane Sparks, Sam Gray Miller, Ronit Jha, Ayomide Jeje, Yanin Charoenpornsawat​ (2026) Training Language Models and Embeddings for Hybrid Classical/Quantum Computing​. Poster presented at the [Midwest Speech and Language Days](https://nlp.cs.illinois.edu/msld.html) at the [University of Illinois in Urbana-Champaign](https://illinois.edu/).
 - Cavar, D., Shane Sparks, Soren DeHaan, Ronit Jha, Ayomide Jeje, Yanin Charoenpomsawat, Sam Gray Miller (2026) Hybrid Classical-Quantum Language and World Models for AI - [CBIRD](/cbird), Poster presentation at the [Center for Quantum Technologies](https://www.purdue.edu/cqt/) ([CQT](https://www.purdue.edu/cqt/)) Meeting 2026 at [Notre Dame](https://www.nd.edu/), 1st of April, 2026.
-- Cavar, D. "*From Vectors to Qubits: Rethinking AI Models for the Hybrid Classical–Quantum Era*," invited keynote lecture, September 16-18, 2026 at the [37th Central European Conference on Information and Intelligent Systems](https://ceciis.foi.hr/) ([CECIIS 2026](https://ceciis.foi.hr/)), Varaždin, Croatia.
-- Cavar, D. "*Hybrid Classical/Quantum Data Structures And Experiments For New AI Architectures*," March 25, 2026, Research Technologies Speaker Series, Cyberinfrastructure Building, Indiana University.
-- [Quantum AI Conference 2026](https://qnlp.ai/) (website currently being updated) will be August 14th–16th on the IUI campus in Indianapolis! Stay tuned for updates!
-- The Complex Bidirectional Inducer for Representation Dynamics (CBIRD) is a Language Model trained to be a fully hybrid classical/quantum model, which can be used on CPU/GPU and QPU systems without encoding loss. It is usable as a state-of-the-art text diffusion model, a BERT-style bidirectional encoder-only model, and more — code and model coming soon.
+- Cavar, D. (2026) "*From Vectors to Qubits: Rethinking AI Models for the Hybrid Classical–Quantum Era*," invited keynote lecture, September 16-18, 2026 at the [37th Central European Conference on Information and Intelligent Systems](https://ceciis.foi.hr/) ([CECIIS 2026](https://ceciis.foi.hr/)), Varaždin, Croatia.
+- Cavar, D. (2026) "*Hybrid Classical/Quantum Data Structures And Experiments For New AI Architectures*," invited lecture, March 25, 2026, Research Technologies Speaker Series, Cyberinfrastructure Building, Indiana University.
+- [Quantum Computing for AI and NLP](/publications/Quantum_Computing_For_AI_and_NLP.pdf), presentation at the Luddy School for Informatics, Computing, and Engineering, Indiana University Bloomington, Undergraduate Research Experiential Learning Fall 2025.
+- [Cavar, D.], James Bryan Graves, Shane A. Sparks and Koushik Reddy Parukola (2025) Hybrid Classical Quantum Embeddings for NLP and AI using Hamiltonians. Short paper and poster presented at the [IEEE Quantum Week 2025](https://qce.quantum.ieee.org/2025/), Albuquerque, New Mexico, USA. ([poster](/publications/IEEE_Quantum_Embedding_Poster_Hamiltonian_2025.pdf))
 
-- [Cavar, D.], James Bryan Graves, Shane Sparks, Koushik Reddy Parukola (2025) Hybrid Classical Quantum Embeddings for NLP and AI using Hamiltonians. IEEE Quantum Week 2025, September 2025, Albuquerque, New Mexico. ([poster](/pubs/IEEE_Quantum_Embedding_Poster_Hamiltonian_2025.pdf))
-- [Cavar, D.], Billy Dickson, James Bryan Graves, Shane A. Sparks, Koushik Reddy Parukola (2025) The Natural Language Qu Kit - NLQK for Quantum NLP and AI. Unpublished. ([poster](/pubs/NLQK_Poster_August_2025.pdf))
-- [Cavar, D.], Koushik Reddy Parukola, James Graves, Shane Sparks (2025) Old Wine in New Bottles: Using Classical Word Embeddings in Gate-Based Quantum NLP Systems. Paper to be presented at the [Quantum AI and NLP Conference 2025](https://qnlp.ai/), Indiana University, August 2025. To appear in proceedings, Fall 2025.
-- [Cavar, D.], Koushik Reddy Parukola, Shane Sparks (2025) Old Wine in New Bottles: Using Classical Word Embeddings in Quantum NLP Systems. Paper to be presented at the [Midwest Speech and Language Days 2025](https://nlp.nd.edu/msld25/), University of Notre Dame, April 2025.
-- Chi Zhang, Akriti Kumari, [Damir Cavar] (2024) *Entangled Meanings: Classification and Ambiguity Resolution in Near–Term QNLP.* Paper and Poster presented at the [IEEE Quantum Week 2024](https://qce.quantum.ieee.org/2024/), Montreal, Canada, September 2024. (paper, poster)
+
+## Talks 
+
+- [Cavar, D.](https://damir.cavar.me/), Koushik Reddy Parukola, James Graves, Shane A. Sparks (2025) Old Wine in New Bottles: Using Classical Word Embeddings in Gate-Based Quantum NLP Systems. Paper to be presented at the [Quantum AI and NLP Conference 2025](https://qnlp.ai/), Indiana University, August 2025.
+- Cavar, D., Koushik Reddy Parukola, Shane A. Sparks (2025) Old Wine in New Bottles: Using Classical Word Embeddings in Quantum NLP Systems. Paper to be presented at the [Midwest Speech and Language Days 2025](https://nlp.nd.edu/msld25/), University of Notre Dame, April 2025.
+- [Damir Cavar], Koushik Reddy Parukola (2025) Word and Text Similarity Using Classical Word Embeddings in Quantum NLP Systems. Satellite Workshop: [Quantum Machine Learning in Signal Processing and Artificial Intelligence](https://sites.google.com/view/qmlicassp2025/home) at the [2025 IEEE International Conference on Acoustics, Speech, and Signal Processing](https://2025.ieeeicassp.org/). Hyderabad, India.
+- Chi Zhang, Akriti Kumari, [Damir Cavar] (2024) *[Entangled Meanings: Classification and Ambiguity Resolution in Near–Term QNLP](https://ieeexplore.ieee.org/document/10821233).* Paper and Poster presented at the [IEEE Quantum Week 2024](https://qce.quantum.ieee.org/2024/), Montreal, Canada, September 2024. (full paper, short paper, poster)
 - [Damir Cavar] and Chi Zhang (2024) *Semantic Similarities using Classical Embeddings in Quantum NLP.* Paper and Poster presented at the [IEEE Quantum Week 2024](https://qce.quantum.ieee.org/2024/), Montreal, Canada, September 2024. (paper, poster)
-- AI &amp; NLP-Lab poster (2024) [Quantum Natural Language Processing and Machine Learning](/pubs/NLP_Lab_Quantum_Poster_2024.pdf). Luddy-Crane Summit on March 29, 2024 at Indiana University Bloomington.
+- Damir Cavar, Chi Zhang, Koushik Reddy Parukola (2024) Quantum Natural Language Processing (QNLP) (2024) Presentation at the [Quantum Day 2024](/QuantumDayIUQuTE2024.png) Seminar Series, organized by [Quantum Technologies for Everyone](https://beinvolved.indiana.edu/organization/qute) ([QuTE](https://beinvolved.indiana.edu/organization/qute)) at Indiana University Bloomington, April 14th 2024.
+- *Quantum-Natural Language Processing (NLP) and Machine Learning (ML)* (2024) Presentation at the [CQT - Center for Quantum Technologies](https://www.purdue.edu/cqt/), NSF Industry/University Cooperative Research Center (IUCRC) Year 2, Phase I, Spring 2024 Industry Advisory Board Meeting, April 3-4, 2024, University of Notre Dame, South Bend, IN.
+- [Quantum Natural Language Processing and Machine Learning](/publications/NLP_Lab_Quantum_Poster_2024.pdf) (2024)  [NLP-Lab] poster. Luddy-Crane Summit on March 29, 2024 at Indiana University Bloomington.
+
+
+## Publications
+
+- Cavar, D., James Bryan Graves, Shane A. Sparks and Koushik Reddy Parukola (2025) Hybrid Classical Quantum Embeddings for NLP and AI using Hamiltonians. Short paper and poster presented at the [IEEE Quantum Week 2025](https://qce.quantum.ieee.org/2025/), Albuquerque, New Mexico, USA.
+- Cavar, D., Koushik Reddy Parukola, James Bryan Graves, Shane Sparks (2025) Old Wine in New Bottles: Using Classical Word Embeddings in Gate-Based Quantum NLP Systems. Paper to be presented at the [Quantum AI and NLP Conference 2025](https://qnlp.ai/), Indiana University, August 2025. In D. Cavar, V. Aggarwal, S. Chen, J. Busemeyer (eds.) Quantum AI and NLP 2025, Springer.
+- Damir Cavar, Koushik Reddy Parukola (2025) [Word and Text Similarity Using Classical Word Embeddings in Quantum NLP Systems](https://ieeexplore.ieee.org/document/11010999). Satellite Workshop: [Quantum Machine Learning in Signal Processing and Artificial Intelligence](https://sites.google.com/view/qmlicassp2025/home) at the [2025 IEEE International Conference on Acoustics, Speech, and Signal Processing](https://2025.ieeeicassp.org/). Hyderabad, India.
+- Chi Zhang, Akriti Kumari, [Damir Cavar] (2024) *[Entangled Meanings: Classification and Ambiguity Resolution in Near–Term QNLP](https://ieeexplore.ieee.org/document/10821233).* Paper and Poster presented at the [IEEE Quantum Week 2024](https://qce.quantum.ieee.org/2024/), Montreal, Canada, September 2024. ([full paper](https://ieeexplore.ieee.org/document/10821233), short paper, poster)
+- [Damir Cavar] and Chi Zhang (2024) *[Semantic Similarities using Classical Embeddings in Quantum NLP.](https://ieeexplore.ieee.org/document/10821048)* Paper and Poster presented at the [IEEE Quantum Week 2024](https://qce.quantum.ieee.org/2024/), Montreal, Canada, September 2024. ([paper](https://ieeexplore.ieee.org/document/10821048), poster)
+
+
+## Software
+
+- We launched the [Natural Language Qu Kit](https://nlqk.ai/) ([NLQK](https://nlqk.ai/)), a Quantum NLP (QNLP) library - [GitHub repo](https://github.com/dcavar/nlqk), [PyPi project](https://pypi.org/project/nlqk/), [website](https://nlqk.ai/)
+
+
+[Damir Cavar]: http://damir.cavar.me/ "Damir Cavar"
+[Dr. Damir Cavar]: https://luddy.indiana.edu/contact/profile/?Damir_Cavar "Damir Cavar"
+[NLP-Lab]: https://ai-science-labs.org/ "AI&amp;NLP-Lab"
