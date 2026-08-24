@@ -5,6 +5,8 @@ Created: [Damir Cavar], 2023-06-12
 Last change: [Damir Cavar], 2026-08-23
 
 
+The Quantum AI Lab is located at [Indiana University at Bloomington](https://iu.edu/). While it is mainly a local group of students and researchers with a strong interest in Quantum Computing and [AI] here in Indiana, it maintains connections with colleagues across the country.
+
 **The Quantum AI Lab meetings during the Fall Semester of 2026 are held in Luddy Hall BL IF 0002 every Thursday from 5:30 to 7:00 PM.**
 
 Please contact [Damir Cavar] if you are interested in joining the Quantum AI Lab or the AI &amp; NLP Lab meetings.
