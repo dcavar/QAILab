@@ -114,46 +114,10 @@ At [Indiana University](https://www.indiana.edu/):
 - AI &amp; NLP-Lab poster (2024) [Quantum Natural Language Processing and Machine Learning](/pubs/NLP_Lab_Quantum_Poster_2024.pdf). Luddy-Crane Summit on March 29, 2024 at Indiana University Bloomington.
 
 
-
 ## Literature <a name="Literature"></a>
 
-<a href="/quantum.html" target="_blank">Bibliography</a>
-
-
-### Papers:
-
-Papers we have read include:
-
-- Laakkonen, Konstantinos, and Coecke (2024) [Quantum Algorithms for Compositional Text Processing](https://arxiv.org/abs/2408.06061).
-- Zhang et al. (2023) [Applications of Quantum Embedding in Computer Vision](https://link.springer.com/chapter/10.1007/978-981-99-8145-8_14) (focus on Quantum Embeddings)
-- Schuld et al. (2014) [An introduction to quantum machine learning](https://arxiv.org/abs/1409.3097).
-- Coecke et al. (2010) [Mathematical Foundations for a Compositional Distributional Model of Meaning](https://arxiv.org/abs/1003.4394).
-- Coecke (2019) [The Mathematics of Text Structure](https://arxiv.org/abs/1904.03478).
-- Gogioso (2016) [A Corpus-based Toy Model for DisCoCat](https://arxiv.org/abs/1605.04013).
-- Bradley et al. (2018) [Translating and Evolving: Towards a Model of Language Change in DisCoCat](https://arxiv.org/abs/1811.11041).
-- Kartasaklis et al. (2021) [lambeq: An Efficient High-Level Python Library for Quantum NLP](https://arxiv.org/abs/2110.04236).
-- Widdows et al. (2022) [Near-Term Advances in Quantum Natural Language Processing](https://arxiv.org/abs/2206.02171).
-- Alexander and Widdows (2023) [Quantum Text Encoding for Classification Tasks](https://arxiv.org/abs/2301.03715).
-- Lorenz et al. (2021) [QNLP in Practice: Running Compositional Models of Meaning on a Quantum Computer](https://arxiv.org/abs/2102.12846).
-- Meichanetzidis et al. (2020) [Grammar-aware sentence classification on quantum computers](https://arxiv.org/abs/2012.03756).
-- Bob Coecke (2023) [Our quest for finding the universality of language](https://medium.com/quantinuum/our-quest-for-finding-the-universality-of-language-d0f7a40b76e6)
-- Widdows, Dominic and Stanley Peters (2003) *[Word Vectors and Quantum Logic Experiments with negation and disjunction](https://www.semanticscholar.org/paper/Word-Vectors-and-Quantum-Logic-Experiments-with-and-Widdows-Peters/5160cad9dc3d6b19ae26796d79f69c24cee0e676#cited-papers)*. 
-
-
-### Books:
-
-- John Watrous. [Understanding Quantum Information and Computation](https://arxiv.org/abs/2507.11536). arXiv:2507.11536, 2025.
-- Nielsen, Michael A., and Isaac L. Chuang. [Quantum Computation and Quantum Information](https://www.cambridge.org/highereducation/books/quantum-computation-and-quantum-information/01E10196D0A682A6AEFFEA52D53BE9AE#overview): 10th Anniversary Edition. Cambridge: Cambridge University Press, 2010. 
-- Luongo, Alessandro (2023) [Quantum algorithms for data analysis](https://quantumalgorithms.org/).
-- Hughes, Ciaran, et al. (2021) [Quantum Computing for the Quantum Curious](https://archive.org/details/oapen-20.500.12657-48236). Springer. Open Access, free download.
-- James K. Freericks (2026) [Quantum Mechanics Done Right: The Shortest Path from Novice to Researcher](https://link.springer.com/book/10.1007/978-3-031-87845-9). Springer Cham.
-- Bob Coecke and Stefano Gogioso (2023) [Quantum in Pictures: A New Way to Understand the Quantum World](https://www.quantinuum.com/news/quantum-in-pictures), Quantinuum.
-- Bob Coecke and Aleks Kissinger (2017) [Picturing Quantum Processes: A First Course in Quantum Theory and Diagrammatic Reasoning](https://www.cambridge.org/core/books/picturing-quantum-processes/1119568B3101F3A685BE832FEEC53E52), Cambridge University Press.
-
-
-Relevant literature from Cognitive Science and Psychology:
-
-- Jerome R. Busemeyer and Peter D. Bruza (2012) *[Quantum Models of Cognition and Decision](https://www.cambridge.org/core/books/quantum-models-of-cognition-and-decision/75909428F710F7C6AF7D580CB83443AC)*. Cambridge University Press. (FYI: the second edition is coming out soon and it has a special chapter on Large Language Models!)
+- [Core books and papers](/literature)
+- <a href="/quantum.html" target="_blank">Bibliography</a>
 
 
 ## Tools and Technologies <a name="tools_and_technologies"></a>

@@ -304,7 +304,7 @@ function updateSetting(obj){
 	   searchAbstract=!searchAbstract;
 	   redoQS();
 	   break;
-	 case "opt_searchComment":
+	 case "opt_searchRev":
 	   searchComment=!searchComment;
 	   redoQS();
 	   break;
@@ -322,12 +322,12 @@ function updateSetting(obj){
 
 function initPreferences(){
 	if(searchAbstract){document.getElementById("opt_searchAbs").checked = true;}
-	if(searchComment){document.getElementById("opt_searchComment").checked = true;}
+	if(searchComment){document.getElementById("opt_searchRev").checked = true;}
 	if(noSquiggles){document.getElementById("opt_noAccents").checked = true;}
 	if(searchRegExp){document.getElementById("opt_useRegExp").checked = true;}
 	
 	if(numAbs==0) {document.getElementById("opt_searchAbs").parentNode.style.display = 'none';}
-	if(numRev==0) {document.getElementById("opt_searchComment").parentNode.style.display = 'none';}	
+	if(numRev==0) {document.getElementById("opt_searchRev").parentNode.style.display = 'none';}
 }
 
 function toggleSettings(){
@@ -348,7 +348,7 @@ function toggleSettings(){
 -->
 </script>
 <style type="text/css">
-body { background-color: white; font-family: Arial, sans-serif; font-size: 13px; line-height: 1.2; padding: 1em; color: #2E2E2E; width: 50em; margin: auto auto; }
+body { background-color: white; font-family: Arial, sans-serif; font-size: 13px; line-height: 1.2; padding: 1em; color: #2E2E2E; margin: auto 2em; }
 
 form#quicksearch { width: auto; border-style: solid; border-color: gray; border-width: 1px 0px; padding: 0.7em 0.5em; display:none; position:relative; }
 span#searchstat {padding-left: 1em;}
@@ -367,8 +367,10 @@ div#settings.hidden {display:none;}
 .invalidsearch { background-color: red; }
 input[type="button"] { background-color: #efefef; border: 1px #2E2E2E solid;}
 
-table { border: 1px gray none; width: 100%; empty-cells: show; border-spacing: 0em 0.1em; margin: 1em 0em; }
-th, td { border: none; padding: 0.5em; vertical-align: top; text-align: justify; }
+table { width: 100%; empty-cells: show; border-spacing: 0em 0.2em; margin: 1em 0em; border-style: none; }
+th, td { border: 1px gray solid; border-width: 1px 1px; padding: 0.5em; vertical-align: top; text-align: left; }
+th { background-color: #efefef; }
+td + td, th + th { border-left: none; }
 
 td a { color: navy; text-decoration: none; }
 td a:hover  { text-decoration: underline; }
@@ -376,7 +378,7 @@ td a:hover  { text-decoration: underline; }
 tr.noshow { display: none;}
 tr.highlight td { background-color: #EFEFEF; border-top: 2px #2E2E2E solid; font-weight: bold; }
 tr.abstract td, tr.comment td, tr.bibtex td { background-color: #EFEFEF; text-align: justify; border-bottom: 2px #2E2E2E solid; }
-tr.nextshow td { border-bottom-style: none; }
+tr.nextshow td { border-bottom: 1px gray solid; }
 
 tr.bibtex pre { width: 100%; overflow: auto; white-space: pre-wrap;}
 p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
@@ -396,21 +398,305 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 <div id="settings" class="hidden">
 <ul>
 <li><input type="checkbox" class="search_setting" id="opt_searchAbs" onchange="updateSetting(this)"><label for="opt_searchAbs"> include abstract</label></li>
-<li><input type="checkbox" class="search_setting" id="opt_searchComment" onchange="updateSetting(this)"><label for="opt_searchComment"> include comment</label></li>
+<li><input type="checkbox" class="search_setting" id="opt_searchRev" onchange="updateSetting(this)"><label for="opt_searchRev"> include comment</label></li>
 <li><input type="checkbox" class="search_setting" id="opt_useRegExp" onchange="updateSetting(this)"><label for="opt_useRegExp"> use RegExp</label></li>
 <li><input type="checkbox" class="search_setting" id="opt_noAccents" onchange="updateSetting(this)"><label for="opt_noAccents"> ignore accents</label></li>
 </ul>
 </div>
 </form>
 <table id="qs_table" border="1">
-<tbody>
+<thead><tr><th width="20%">Author</th><th width="30%">Title</th><th width="5%">Year</th><th width="30%">Journal/Proceedings</th><th width="10%">Reftype</th><th width="5%">DOI/URL</th></tr></thead>
+<tbody><tr id="Hughes:ea:2021" class="entry">
+	<td>Hughes, C., Isaacson, J., Perry, A., Sun, R.F. and Turner, J.</td>
+	<td>Quantum Computing for the Quantum Curious <p class="infolinks">[<a href="javascript:toggleInfo('Hughes:ea:2021','bibtex')">BibTeX</a>]</p></td>
+	<td>2021</td>
+	<td>&nbsp;</td>
+	<td>book</td>
+	<td><a href="https://archive.org/details/oapen-20.500.12657-48236">URL</a>&nbsp;</td>
+</tr>
+<tr id="bib_Hughes:ea:2021" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@book{Hughes:ea:2021,
+  author = {Ciaran Hughes and Joshua Isaacson and Anastasia Perry and Ranbel F. Sun and Jessica Turner},
+  title = {Quantum Computing for the Quantum Curious},
+  publisher = {Springer},
+  year = {2021},
+  note = {Open Access},
+  url = {https://archive.org/details/oapen-20.500.12657-48236}
+}
+</pre></td>
+</tr>
+<tr id="Nielsen_Chuang_2010" class="entry">
+	<td>Nielsen, M.A. and Chuang, I.L.</td>
+	<td>Quantum Computation and Quantum Information <p class="infolinks">[<a href="javascript:toggleInfo('Nielsen_Chuang_2010','bibtex')">BibTeX</a>]</p></td>
+	<td>2010</td>
+	<td>&nbsp;</td>
+	<td>book</td>
+	<td><a href="https://www.cambridge.org/highereducation/books/quantum-computation-and-quantum-information/01E10196D0A682A6AEFFEA52D53BE9AE">URL</a>&nbsp;</td>
+</tr>
+<tr id="bib_Nielsen_Chuang_2010" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@book{Nielsen_Chuang_2010,
+  author = {Nielsen, Michael A. and Chuang, Isaac L.},
+  title = {Quantum Computation and Quantum Information},
+  publisher = {Cambridge University Press},
+  year = {2010},
+  edition = {10th Anniversary Edition},
+  url = {https://www.cambridge.org/highereducation/books/quantum-computation-and-quantum-information/01E10196D0A682A6AEFFEA52D53BE9AE}
+}
+</pre></td>
+</tr>
+<tr id="Bernhardt2020QuantumComputing" class="entry">
+	<td>Bernhardt, C.</td>
+	<td>Quantum Computing for Everyone <p class="infolinks">[<a href="javascript:toggleInfo('Bernhardt2020QuantumComputing','bibtex')">BibTeX</a>]</p></td>
+	<td>2020</td>
+	<td>&nbsp;</td>
+	<td>book</td>
+	<td><a href="https://mitpress.mit.edu/9780262539531/quantum-computing-for-everyone/">URL</a>&nbsp;</td>
+</tr>
+<tr id="bib_Bernhardt2020QuantumComputing" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@book{Bernhardt2020QuantumComputing,
+  author = {Chris Bernhardt},
+  title = {Quantum Computing for Everyone},
+  publisher = {The MIT Press},
+  year = {2020},
+  url = {https://mitpress.mit.edu/9780262539531/quantum-computing-for-everyone/}
+}
+</pre></td>
+</tr>
+<tr id="CoeckeGogioso2023QuantumPictures" class="entry">
+	<td>Coecke, B. and Gogioso, S.</td>
+	<td>Quantum in Pictures: A New Way to Understand the Quantum World <p class="infolinks">[<a href="javascript:toggleInfo('CoeckeGogioso2023QuantumPictures','bibtex')">BibTeX</a>]</p></td>
+	<td>2023</td>
+	<td>&nbsp;</td>
+	<td>book</td>
+	<td><a href="https://www.quantinuum.com/news/quantum-in-pictures">URL</a>&nbsp;</td>
+</tr>
+<tr id="bib_CoeckeGogioso2023QuantumPictures" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@book{CoeckeGogioso2023QuantumPictures,
+  author = {Bob Coecke and Stefano Gogioso},
+  title = {Quantum in Pictures: A New Way to Understand the Quantum World},
+  publisher = {Quantinuum},
+  year = {2023},
+  url = {https://www.quantinuum.com/news/quantum-in-pictures}
+}
+</pre></td>
+</tr>
+<tr id="CoeckeKissinger2017Picturing" class="entry">
+	<td>Coecke, B. and Kissinger, A.</td>
+	<td>Picturing Quantum Processes: A First Course in Quantum Theory and Diagrammatic Reasoning <p class="infolinks">[<a href="javascript:toggleInfo('CoeckeKissinger2017Picturing','bibtex')">BibTeX</a>]</p></td>
+	<td>2017</td>
+	<td>&nbsp;</td>
+	<td>book</td>
+	<td><a href="https://doi.org/10.1017/9781316219317">DOI</a> <a href="https://www.cambridge.org/core/books/picturing-quantum-processes/1119568B3101F3A685BE832FEEC53E52">URL</a>&nbsp;</td>
+</tr>
+<tr id="bib_CoeckeKissinger2017Picturing" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@book{CoeckeKissinger2017Picturing,
+  author = {Bob Coecke and Aleks Kissinger},
+  title = {Picturing Quantum Processes: A First Course in Quantum Theory and Diagrammatic Reasoning},
+  publisher = {Cambridge University Press},
+  year = {2017},
+  url = {https://www.cambridge.org/core/books/picturing-quantum-processes/1119568B3101F3A685BE832FEEC53E52},
+  doi = {https://doi.org/10.1017/9781316219317}
+}
+</pre></td>
+</tr>
+<tr id="CombarroGonzalezCastillo2023Practical" class="entry">
+	<td>Combarro, E.F. and Gonz&aacute;lez-Castillo, S.</td>
+	<td>A Practical Guide to Quantum Machine Learning and Quantum Optimization <p class="infolinks">[<a href="javascript:toggleInfo('CombarroGonzalezCastillo2023Practical','bibtex')">BibTeX</a>]</p></td>
+	<td>2023</td>
+	<td>&nbsp;</td>
+	<td>book</td>
+	<td><a href="https://github.com/PacktPublishing/A-Practical-Guide-to-Quantum-Machine-Learning-and-Quantum-Optimization">URL</a>&nbsp;</td>
+</tr>
+<tr id="bib_CombarroGonzalezCastillo2023Practical" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@book{CombarroGonzalezCastillo2023Practical,
+  author = {El&iacute;as F. Combarro and Samuel Gonz&aacute;lez-Castillo},
+  title = {A Practical Guide to Quantum Machine Learning and Quantum Optimization},
+  publisher = {Packt Publishing},
+  year = {2023},
+  url = {https://github.com/PacktPublishing/A-Practical-Guide-to-Quantum-Machine-Learning-and-Quantum-Optimization}
+}
+</pre></td>
+</tr>
+<tr id="Freericks2026QuantumMechanics" class="entry">
+	<td>Freericks, J.K.</td>
+	<td>Quantum Mechanics Done Right: The Shortest Path from Novice to Researcher <p class="infolinks">[<a href="javascript:toggleInfo('Freericks2026QuantumMechanics','bibtex')">BibTeX</a>]</p></td>
+	<td>2026</td>
+	<td>&nbsp;</td>
+	<td>book</td>
+	<td><a href="https://doi.org/10.1007/978-3-031-87845-9">DOI</a> <a href="https://link.springer.com/book/10.1007/978-3-031-87845-9">URL</a>&nbsp;</td>
+</tr>
+<tr id="bib_Freericks2026QuantumMechanics" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@book{Freericks2026QuantumMechanics,
+  author = {James K. Freericks},
+  title = {Quantum Mechanics Done Right: The Shortest Path from Novice to Researcher},
+  publisher = {Springer Cham},
+  year = {2026},
+  url = {https://link.springer.com/book/10.1007/978-3-031-87845-9},
+  doi = {https://doi.org/10.1007/978-3-031-87845-9}
+}
+</pre></td>
+</tr>
+<tr id="JohnstonEtAl2019Programming" class="entry">
+	<td>Johnston, E.R., Harrigan, N. and Gimeno-Segovia, M.</td>
+	<td>Programming Quantum Computers <p class="infolinks">[<a href="javascript:toggleInfo('JohnstonEtAl2019Programming','bibtex')">BibTeX</a>]</p></td>
+	<td>2019</td>
+	<td>&nbsp;</td>
+	<td>book</td>
+	<td><a href="https://www.oreilly.com/library/view/programming-quantum-computers/9781492039679/">URL</a>&nbsp;</td>
+</tr>
+<tr id="bib_JohnstonEtAl2019Programming" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@book{JohnstonEtAl2019Programming,
+  author = {Eric R. Johnston and Nic Harrigan and Mercedes Gimeno-Segovia},
+  title = {Programming Quantum Computers},
+  publisher = {O'Reilly Media, Inc.},
+  year = {2019},
+  url = {https://www.oreilly.com/library/view/programming-quantum-computers/9781492039679/}
+}
+</pre></td>
+</tr>
+<tr id="Luongo2023QuantumAlgorithms" class="entry">
+	<td>Luongo, A.</td>
+	<td>Quantum Algorithms for Data Analysis <p class="infolinks">[<a href="javascript:toggleInfo('Luongo2023QuantumAlgorithms','bibtex')">BibTeX</a>]</p></td>
+	<td>2023</td>
+	<td>&nbsp;</td>
+	<td>book</td>
+	<td><a href="https://quantumalgorithms.org/">URL</a>&nbsp;</td>
+</tr>
+<tr id="bib_Luongo2023QuantumAlgorithms" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@book{Luongo2023QuantumAlgorithms,
+  author = {Alessandro Luongo},
+  title = {Quantum Algorithms for Data Analysis},
+  year = {2023},
+  url = {https://quantumalgorithms.org/}
+}
+</pre></td>
+</tr>
+<tr id="Rudolph2017QQuantum" class="entry">
+	<td>Rudolph, T.</td>
+	<td>Q Is for Quantum: Quantum Mechanics for Those Who Only Know Basic Arithmetic <p class="infolinks">[<a href="javascript:toggleInfo('Rudolph2017QQuantum','bibtex')">BibTeX</a>]</p></td>
+	<td>2017</td>
+	<td>&nbsp;</td>
+	<td>book</td>
+	<td><a href="https://www.qisforquantum.org/">URL</a>&nbsp;</td>
+</tr>
+<tr id="bib_Rudolph2017QQuantum" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@book{Rudolph2017QQuantum,
+  author = {Terry Rudolph},
+  title = {Q Is for Quantum: Quantum Mechanics for Those Who Only Know Basic Arithmetic},
+  year = {2017},
+  url = {https://www.qisforquantum.org/}
+}
+</pre></td>
+</tr>
+<tr id="Sutor2019DancingQubits" class="entry">
+	<td>Sutor, R.S.</td>
+	<td>Dancing with Qubits: How Quantum Computing Works and How It Can Change the World <p class="infolinks">[<a href="javascript:toggleInfo('Sutor2019DancingQubits','bibtex')">BibTeX</a>]</p></td>
+	<td>2019</td>
+	<td>&nbsp;</td>
+	<td>book</td>
+	<td><a href="https://www.packtpub.com/en-us/product/dancing-with-qubits-9781838827366">URL</a>&nbsp;</td>
+</tr>
+<tr id="bib_Sutor2019DancingQubits" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@book{Sutor2019DancingQubits,
+  author = {Robert S. Sutor},
+  title = {Dancing with Qubits: How Quantum Computing Works and How It Can Change the World},
+  publisher = {Packt Publishing},
+  year = {2019},
+  url = {https://www.packtpub.com/en-us/product/dancing-with-qubits-9781838827366}
+}
+</pre></td>
+</tr>
+<tr id="Watrous2025Understanding" class="entry">
+	<td>Watrous, J.</td>
+	<td>Understanding Quantum Information and Computation <p class="infolinks">[<a href="javascript:toggleInfo('Watrous2025Understanding','bibtex')">BibTeX</a>]</p></td>
+	<td>2025</td>
+	<td>&nbsp;</td>
+	<td>book</td>
+	<td><a href="https://arxiv.org/abs/2507.11536">URL</a>&nbsp;</td>
+</tr>
+<tr id="bib_Watrous2025Understanding" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@book{Watrous2025Understanding,
+  author = {John Watrous},
+  title = {Understanding Quantum Information and Computation},
+  year = {2025},
+  url = {https://arxiv.org/abs/2507.11536}
+}
+</pre></td>
+</tr>
+<tr id="WeaverHarkins2022Qiskit" class="entry">
+	<td>Weaver, J.L. and Harkins, F.J.</td>
+	<td>Qiskit Pocket Guide <p class="infolinks">[<a href="javascript:toggleInfo('WeaverHarkins2022Qiskit','bibtex')">BibTeX</a>]</p></td>
+	<td>2022</td>
+	<td>&nbsp;</td>
+	<td>book</td>
+	<td><a href="https://www.oreilly.com/library/view/qiskit-pocket-guide/9781098112462/part01.html">URL</a>&nbsp;</td>
+</tr>
+<tr id="bib_WeaverHarkins2022Qiskit" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@book{WeaverHarkins2022Qiskit,
+  author = {James L. Weaver and Frank J. Harkins},
+  title = {Qiskit Pocket Guide},
+  publisher = {O'Reilly Media, Inc.},
+  year = {2022},
+  url = {https://www.oreilly.com/library/view/qiskit-pocket-guide/9781098112462/part01.html}
+}
+</pre></td>
+</tr>
+<tr id="Woody2022EssentialMathematics" class="entry">
+	<td>Leonard S. Woody, III</td>
+	<td>Essential Mathematics for Quantum Computing <p class="infolinks">[<a href="javascript:toggleInfo('Woody2022EssentialMathematics','bibtex')">BibTeX</a>]</p></td>
+	<td>2022</td>
+	<td>&nbsp;</td>
+	<td>book</td>
+	<td><a href="https://www.oreilly.com/library/view/essential-mathematics-for/9781801073141/">URL</a>&nbsp;</td>
+</tr>
+<tr id="bib_Woody2022EssentialMathematics" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@book{Woody2022EssentialMathematics,
+  author = {Leonard S. Woody III},
+  title = {Essential Mathematics for Quantum Computing},
+  publisher = {Packt Publishing},
+  year = {2022},
+  url = {https://www.oreilly.com/library/view/essential-mathematics-for/9781801073141/}
+}
+</pre></td>
+</tr>
 <tr id="Widdows2003WordVA" class="entry">
-	<td>Widdows D and Peters S (2003), <i>"Word Vectors and Quantum Logic Experiments with negation and disjunction"</i> 
-	<p class="infolinks"> [<a href="javascript:toggleInfo('Widdows2003WordVA','bibtex')">BibTeX</a>] [<a href="https://api.semanticscholar.org/CorpusID:14230035" target="_blank">URL</a>]</p>
-	</td>
+	<td>Widdows, D. and Peters, S.</td>
+	<td>Word Vectors and Quantum Logic Experiments with negation and disjunction <p class="infolinks">[<a href="javascript:toggleInfo('Widdows2003WordVA','bibtex')">BibTeX</a>]</p></td>
+	<td>2003</td>
+	<td>&nbsp;</td>
+	<td>inproceedings</td>
+	<td><a href="https://api.semanticscholar.org/CorpusID:14230035">URL</a>&nbsp;</td>
 </tr>
 <tr id="bib_Widdows2003WordVA" class="bibtex noshow">
-<td><b>BibTeX</b>:
+<td colspan="6"><b>BibTeX</b>:
 <pre>
 @inproceedings{Widdows2003WordVA,
   author = {Dominic Widdows and Stanley Peters},
@@ -421,12 +707,15 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 </pre></td>
 </tr>
 <tr id="Coecke2020FoundationsFN" class="entry">
-	<td>Coecke B, de Felice G, Meichanetzidis K and Toumi A (2020), <i>"Foundations for Near-Term Quantum Natural Language Processing"</i>, ArXiv.  Vol. abs/2012.03755
-	<p class="infolinks"> [<a href="javascript:toggleInfo('Coecke2020FoundationsFN','bibtex')">BibTeX</a>] [<a href="https://api.semanticscholar.org/CorpusID:227334565" target="_blank">URL</a>]</p>
-	</td>
+	<td>Coecke, B., de Felice, G., Meichanetzidis, K. and Toumi, A.</td>
+	<td>Foundations for Near-Term Quantum Natural Language Processing <p class="infolinks">[<a href="javascript:toggleInfo('Coecke2020FoundationsFN','bibtex')">BibTeX</a>]</p></td>
+	<td>2020</td>
+	<td>ArXiv<br/>Vol. abs/2012.03755&nbsp;</td>
+	<td>article</td>
+	<td><a href="https://api.semanticscholar.org/CorpusID:227334565">URL</a>&nbsp;</td>
 </tr>
 <tr id="bib_Coecke2020FoundationsFN" class="bibtex noshow">
-<td><b>BibTeX</b>:
+<td colspan="6"><b>BibTeX</b>:
 <pre>
 @article{Coecke2020FoundationsFN,
   author = {Bob Coecke and Giovanni de Felice and Konstantinos Meichanetzidis and Alexis Toumi},
@@ -439,12 +728,15 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 </pre></td>
 </tr>
 <tr id="Widdows2012RealCA" class="entry">
-	<td>Widdows D and Cohen TA (2012), <i>"Real, Complex, and Binary Semantic Vectors"</i>, In Quantum Interaction. 
-	<p class="infolinks"> [<a href="javascript:toggleInfo('Widdows2012RealCA','bibtex')">BibTeX</a>] [<a href="https://api.semanticscholar.org/CorpusID:16536301" target="_blank">URL</a>]</p>
-	</td>
+	<td>Widdows, D. and Cohen, T.A.</td>
+	<td>Real, Complex, and Binary Semantic Vectors <p class="infolinks">[<a href="javascript:toggleInfo('Widdows2012RealCA','bibtex')">BibTeX</a>]</p></td>
+	<td>2012</td>
+	<td>Quantum Interaction&nbsp;</td>
+	<td>inproceedings</td>
+	<td><a href="https://api.semanticscholar.org/CorpusID:16536301">URL</a>&nbsp;</td>
 </tr>
 <tr id="bib_Widdows2012RealCA" class="bibtex noshow">
-<td><b>BibTeX</b>:
+<td colspan="6"><b>BibTeX</b>:
 <pre>
 @inproceedings{Widdows2012RealCA,
   author = {Dominic Widdows and Trevor A. Cohen},
@@ -456,12 +748,15 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 </pre></td>
 </tr>
 <tr id="Cohen2010LogicalLA" class="entry">
-	<td>Cohen TA, Widdows D, Schvaneveldt RW and Rindflesch TC (2010), <i>"Logical Leaps and Quantum Connectives: Forging Paths through Predication Space"</i>, In AAAI Fall Symposium: Quantum Informatics for Cognitive, Social, and Semantic Processes. 
-	<p class="infolinks"> [<a href="javascript:toggleInfo('Cohen2010LogicalLA','bibtex')">BibTeX</a>] [<a href="https://api.semanticscholar.org/CorpusID:18399775" target="_blank">URL</a>]</p>
-	</td>
+	<td>Cohen, T.A., Widdows, D., Schvaneveldt, R.W. and Rindflesch, T.C.</td>
+	<td>Logical Leaps and Quantum Connectives: Forging Paths through Predication Space <p class="infolinks">[<a href="javascript:toggleInfo('Cohen2010LogicalLA','bibtex')">BibTeX</a>]</p></td>
+	<td>2010</td>
+	<td>AAAI Fall Symposium: Quantum Informatics for Cognitive, Social, and Semantic Processes&nbsp;</td>
+	<td>inproceedings</td>
+	<td><a href="https://api.semanticscholar.org/CorpusID:18399775">URL</a>&nbsp;</td>
 </tr>
 <tr id="bib_Cohen2010LogicalLA" class="bibtex noshow">
-<td><b>BibTeX</b>:
+<td colspan="6"><b>BibTeX</b>:
 <pre>
 @inproceedings{Cohen2010LogicalLA,
   author = {Trevor A. Cohen and Dominic Widdows and Roger W. Schvaneveldt and Thomas C. Rindflesch},
@@ -473,12 +768,15 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 </pre></td>
 </tr>
 <tr id="Ashcroft2010DoesSI" class="entry">
-	<td>Ashcroft M (2010), <i>"Does Science Influence the Logic we Ought to Use: A Reflection on the Quantum Logic Controversy"</i>, Studia Logica.  Vol. 95, pp. 183-206.
-	<p class="infolinks"> [<a href="javascript:toggleInfo('Ashcroft2010DoesSI','bibtex')">BibTeX</a>] [<a href="https://api.semanticscholar.org/CorpusID:123150993" target="_blank">URL</a>]</p>
-	</td>
+	<td>Ashcroft, M.</td>
+	<td>Does Science Influence the Logic we Ought to Use: A Reflection on the Quantum Logic Controversy <p class="infolinks">[<a href="javascript:toggleInfo('Ashcroft2010DoesSI','bibtex')">BibTeX</a>]</p></td>
+	<td>2010</td>
+	<td>Studia Logica<br/>Vol. 95, pp. 183-206&nbsp;</td>
+	<td>article</td>
+	<td><a href="https://api.semanticscholar.org/CorpusID:123150993">URL</a>&nbsp;</td>
 </tr>
 <tr id="bib_Ashcroft2010DoesSI" class="bibtex noshow">
-<td><b>BibTeX</b>:
+<td colspan="6"><b>BibTeX</b>:
 <pre>
 @article{Ashcroft2010DoesSI,
   author = {Michael Ashcroft},
@@ -492,12 +790,15 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 </pre></td>
 </tr>
 <tr id="Aerts2013MeaningFocusedAQ" class="entry">
-	<td>Aerts D, Broekaert J, Sozzo S and Veloz T (2013), <i>"Meaning-Focused and Quantum-Inspired Information Retrieval"</i>, ArXiv.  Vol. abs/1304.0104
-	<p class="infolinks"> [<a href="javascript:toggleInfo('Aerts2013MeaningFocusedAQ','bibtex')">BibTeX</a>] [<a href="https://api.semanticscholar.org/CorpusID:18380257" target="_blank">URL</a>]</p>
-	</td>
+	<td>Aerts, D., Broekaert, J., Sozzo, S. and Veloz, T.</td>
+	<td>Meaning-Focused and Quantum-Inspired Information Retrieval <p class="infolinks">[<a href="javascript:toggleInfo('Aerts2013MeaningFocusedAQ','bibtex')">BibTeX</a>]</p></td>
+	<td>2013</td>
+	<td>ArXiv<br/>Vol. abs/1304.0104&nbsp;</td>
+	<td>article</td>
+	<td><a href="https://api.semanticscholar.org/CorpusID:18380257">URL</a>&nbsp;</td>
 </tr>
 <tr id="bib_Aerts2013MeaningFocusedAQ" class="bibtex noshow">
-<td><b>BibTeX</b>:
+<td colspan="6"><b>BibTeX</b>:
 <pre>
 @article{Aerts2013MeaningFocusedAQ,
   author = {Diederik Aerts and Jan Broekaert and Sandro Sozzo and Tom&aacute;s Veloz},
@@ -510,12 +811,15 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 </pre></td>
 </tr>
 <tr id="Aerts2011QuantumSI" class="entry">
-	<td>Aerts D, Gabora L, Sozzo S and Veloz T (2011), <i>"Quantum Structure in Cognition: Fundamentals and Applications"</i>, ArXiv.  Vol. abs/1104.3344
-	<p class="infolinks"> [<a href="javascript:toggleInfo('Aerts2011QuantumSI','bibtex')">BibTeX</a>] [<a href="https://api.semanticscholar.org/CorpusID:17510530" target="_blank">URL</a>]</p>
-	</td>
+	<td>Aerts, D., Gabora, L., Sozzo, S. and Veloz, T.</td>
+	<td>Quantum Structure in Cognition: Fundamentals and Applications <p class="infolinks">[<a href="javascript:toggleInfo('Aerts2011QuantumSI','bibtex')">BibTeX</a>]</p></td>
+	<td>2011</td>
+	<td>ArXiv<br/>Vol. abs/1104.3344&nbsp;</td>
+	<td>article</td>
+	<td><a href="https://api.semanticscholar.org/CorpusID:17510530">URL</a>&nbsp;</td>
 </tr>
 <tr id="bib_Aerts2011QuantumSI" class="bibtex noshow">
-<td><b>BibTeX</b>:
+<td colspan="6"><b>BibTeX</b>:
 <pre>
 @article{Aerts2011QuantumSI,
   author = {Diederik Aerts and Liane Gabora and Sandro Sozzo and Tom&aacute;s Veloz},
@@ -528,12 +832,15 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 </pre></td>
 </tr>
 <tr id="Lorenz2021QNLPIP" class="entry">
-	<td>Lorenz R, Pearson AN, Meichanetzidis K, Kartsaklis D and Coecke B (2021), <i>"QNLP in Practice: Running Compositional Models of Meaning on a Quantum Computer"</i>, J. Artif. Intell. Res..  Vol. 76, pp. 1305-1342.
-	<p class="infolinks"> [<a href="javascript:toggleInfo('Lorenz2021QNLPIP','bibtex')">BibTeX</a>] [<a href="https://api.semanticscholar.org/CorpusID:232046044" target="_blank">URL</a>]</p>
-	</td>
+	<td>Lorenz, R., Pearson, A.N., Meichanetzidis, K., Kartsaklis, D. and Coecke, B.</td>
+	<td>QNLP in Practice: Running Compositional Models of Meaning on a Quantum Computer <p class="infolinks">[<a href="javascript:toggleInfo('Lorenz2021QNLPIP','bibtex')">BibTeX</a>]</p></td>
+	<td>2021</td>
+	<td>J. Artif. Intell. Res.<br/>Vol. 76, pp. 1305-1342&nbsp;</td>
+	<td>article</td>
+	<td><a href="https://api.semanticscholar.org/CorpusID:232046044">URL</a>&nbsp;</td>
 </tr>
 <tr id="bib_Lorenz2021QNLPIP" class="bibtex noshow">
-<td><b>BibTeX</b>:
+<td colspan="6"><b>BibTeX</b>:
 <pre>
 @article{Lorenz2021QNLPIP,
   author = {Robin Lorenz and A. N. Pearson and Konstantinos Meichanetzidis and Dimitri Kartsaklis and Bob Coecke},
@@ -547,12 +854,15 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 </pre></td>
 </tr>
 <tr id="Correia2021QuantumCF" class="entry">
-	<td>Correia AD, Moortgat M and Stoof HTC (2021), <i>"Quantum computations for disambiguation and question answering"</i>, Quantum Information Processing.  Vol. 21
-	<p class="infolinks"> [<a href="javascript:toggleInfo('Correia2021QuantumCF','bibtex')">BibTeX</a>] [<a href="https://api.semanticscholar.org/CorpusID:246295077" target="_blank">URL</a>]</p>
-	</td>
+	<td>Correia, A.D., Moortgat, M. and Stoof, H.T.C.</td>
+	<td>Quantum computations for disambiguation and question answering <p class="infolinks">[<a href="javascript:toggleInfo('Correia2021QuantumCF','bibtex')">BibTeX</a>]</p></td>
+	<td>2021</td>
+	<td>Quantum Information Processing<br/>Vol. 21&nbsp;</td>
+	<td>article</td>
+	<td><a href="https://api.semanticscholar.org/CorpusID:246295077">URL</a>&nbsp;</td>
 </tr>
 <tr id="bib_Correia2021QuantumCF" class="bibtex noshow">
-<td><b>BibTeX</b>:
+<td colspan="6"><b>BibTeX</b>:
 <pre>
 @article{Correia2021QuantumCF,
   author = {Adriana D. Correia and Michael Moortgat and Henk T. C. Stoof},
@@ -565,12 +875,15 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 </pre></td>
 </tr>
 <tr id="Abbaszade2023TowardQM" class="entry">
-	<td>Abbaszade M, Zomorodi M, Salari V and Kurian P (2023), <i>"Toward Quantum Machine Translation of Syntactically Distinct Languages"</i>, ArXiv.  Vol. abs/2307.16576
-	<p class="infolinks"> [<a href="javascript:toggleInfo('Abbaszade2023TowardQM','bibtex')">BibTeX</a>] [<a href="https://api.semanticscholar.org/CorpusID:260334460" target="_blank">URL</a>]</p>
-	</td>
+	<td>Abbaszade, M., Zomorodi, M., Salari, V. and Kurian, P.</td>
+	<td>Toward Quantum Machine Translation of Syntactically Distinct Languages <p class="infolinks">[<a href="javascript:toggleInfo('Abbaszade2023TowardQM','bibtex')">BibTeX</a>]</p></td>
+	<td>2023</td>
+	<td>ArXiv<br/>Vol. abs/2307.16576&nbsp;</td>
+	<td>article</td>
+	<td><a href="https://api.semanticscholar.org/CorpusID:260334460">URL</a>&nbsp;</td>
 </tr>
 <tr id="bib_Abbaszade2023TowardQM" class="bibtex noshow">
-<td><b>BibTeX</b>:
+<td colspan="6"><b>BibTeX</b>:
 <pre>
 @article{Abbaszade2023TowardQM,
   author = {Mina Abbaszade and Mariam Zomorodi and Vahid Salari and Philip Kurian},
@@ -583,12 +896,15 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 </pre></td>
 </tr>
 <tr id="Meichanetzidis2020GrammarAwareQO" class="entry">
-	<td>Meichanetzidis K, Toumi A, de Felice G and Coecke B (2020), <i>"Grammar-Aware Question-Answering on Quantum Computers"</i>, ArXiv.  Vol. abs/2012.03756
-	<p class="infolinks"> [<a href="javascript:toggleInfo('Meichanetzidis2020GrammarAwareQO','bibtex')">BibTeX</a>] [<a href="https://api.semanticscholar.org/CorpusID:227335371" target="_blank">URL</a>]</p>
-	</td>
+	<td>Meichanetzidis, K., Toumi, A., de Felice, G. and Coecke, B.</td>
+	<td>Grammar-Aware Question-Answering on Quantum Computers <p class="infolinks">[<a href="javascript:toggleInfo('Meichanetzidis2020GrammarAwareQO','bibtex')">BibTeX</a>]</p></td>
+	<td>2020</td>
+	<td>ArXiv<br/>Vol. abs/2012.03756&nbsp;</td>
+	<td>article</td>
+	<td><a href="https://api.semanticscholar.org/CorpusID:227335371">URL</a>&nbsp;</td>
 </tr>
 <tr id="bib_Meichanetzidis2020GrammarAwareQO" class="bibtex noshow">
-<td><b>BibTeX</b>:
+<td colspan="6"><b>BibTeX</b>:
 <pre>
 @article{Meichanetzidis2020GrammarAwareQO,
   author = {Konstantinos Meichanetzidis and Alexis Toumi and Giovanni de Felice and Bob Coecke},
@@ -601,12 +917,15 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 </pre></td>
 </tr>
 <tr id="Widdows2022NearTermAI" class="entry">
-	<td>Widdows D, Zhu D and Zimmerman C (2022), <i>"Near-Term Advances in Quantum Natural Language Processing"</i>, ArXiv.  Vol. abs/2206.02171
-	<p class="infolinks"> [<a href="javascript:toggleInfo('Widdows2022NearTermAI','bibtex')">BibTeX</a>] [<a href="https://api.semanticscholar.org/CorpusID:249395558" target="_blank">URL</a>]</p>
-	</td>
+	<td>Widdows, D., Zhu, D. and Zimmerman, C.</td>
+	<td>Near-Term Advances in Quantum Natural Language Processing <p class="infolinks">[<a href="javascript:toggleInfo('Widdows2022NearTermAI','bibtex')">BibTeX</a>]</p></td>
+	<td>2022</td>
+	<td>ArXiv<br/>Vol. abs/2206.02171&nbsp;</td>
+	<td>article</td>
+	<td><a href="https://api.semanticscholar.org/CorpusID:249395558">URL</a>&nbsp;</td>
 </tr>
 <tr id="bib_Widdows2022NearTermAI" class="bibtex noshow">
-<td><b>BibTeX</b>:
+<td colspan="6"><b>BibTeX</b>:
 <pre>
 @article{Widdows2022NearTermAI,
   author = {Dominic Widdows and Daiwei Zhu and Chase Zimmerman},
@@ -619,12 +938,15 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 </pre></td>
 </tr>
 <tr id="Meichanetzidis2020GrammarawareSC" class="entry">
-	<td>Meichanetzidis K, Toumi A, de Felice G and Coecke B (2020), <i>"Grammar-aware sentence classification on quantum computers"</i>, Quantum Machine Intelligence.  Vol. 5, pp. 1-16.
-	<p class="infolinks"> [<a href="javascript:toggleInfo('Meichanetzidis2020GrammarawareSC','bibtex')">BibTeX</a>] [<a href="https://api.semanticscholar.org/CorpusID:256832721" target="_blank">URL</a>]</p>
-	</td>
+	<td>Meichanetzidis, K., Toumi, A., de Felice, G. and Coecke, B.</td>
+	<td>Grammar-aware sentence classification on quantum computers <p class="infolinks">[<a href="javascript:toggleInfo('Meichanetzidis2020GrammarawareSC','bibtex')">BibTeX</a>]</p></td>
+	<td>2020</td>
+	<td>Quantum Machine Intelligence<br/>Vol. 5, pp. 1-16&nbsp;</td>
+	<td>article</td>
+	<td><a href="https://api.semanticscholar.org/CorpusID:256832721">URL</a>&nbsp;</td>
 </tr>
 <tr id="bib_Meichanetzidis2020GrammarawareSC" class="bibtex noshow">
-<td><b>BibTeX</b>:
+<td colspan="6"><b>BibTeX</b>:
 <pre>
 @article{Meichanetzidis2020GrammarawareSC,
   author = {Konstantinos Meichanetzidis and Alexis Toumi and Giovanni de Felice and Bob Coecke},
@@ -638,12 +960,15 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 </pre></td>
 </tr>
 <tr id="Metawei2023ATC" class="entry">
-	<td>Metawei MA, Taher M, Eldeeb H and Nassar SM (2023), <i>"A topic-aware classifier based on a hybrid quantum-classical model"</i>, Neural Computing and Applications.  Vol. 35, pp. 18803-18812.
-	<p class="infolinks"> [<a href="javascript:toggleInfo('Metawei2023ATC','bibtex')">BibTeX</a>] [<a href="https://api.semanticscholar.org/CorpusID:259566154" target="_blank">URL</a>]</p>
-	</td>
+	<td>Metawei, M.A., Taher, M., Eldeeb, H. and Nassar, S.M.</td>
+	<td>A topic-aware classifier based on a hybrid quantum-classical model <p class="infolinks">[<a href="javascript:toggleInfo('Metawei2023ATC','bibtex')">BibTeX</a>]</p></td>
+	<td>2023</td>
+	<td>Neural Computing and Applications<br/>Vol. 35, pp. 18803-18812&nbsp;</td>
+	<td>article</td>
+	<td><a href="https://api.semanticscholar.org/CorpusID:259566154">URL</a>&nbsp;</td>
 </tr>
 <tr id="bib_Metawei2023ATC" class="bibtex noshow">
-<td><b>BibTeX</b>:
+<td colspan="6"><b>BibTeX</b>:
 <pre>
 @article{Metawei2023ATC,
   author = {Maha A. Metawei and Mohamed Taher and Hesham Eldeeb and Salwa M. Nassar},
@@ -657,12 +982,15 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 </pre></td>
 </tr>
 <tr id="Karamlou2022QuantumNL" class="entry">
-	<td>Karamlou A, Pfaffhauser M and Wootton JR (2022), <i>"Quantum Natural Language Generation on Near-Term Devices"</i>, ArXiv.  Vol. abs/2211.00727
-	<p class="infolinks"> [<a href="javascript:toggleInfo('Karamlou2022QuantumNL','bibtex')">BibTeX</a>] [<a href="https://api.semanticscholar.org/CorpusID:253254972" target="_blank">URL</a>]</p>
-	</td>
+	<td>Karamlou, A., Pfaffhauser, M. and Wootton, J.R.</td>
+	<td>Quantum Natural Language Generation on Near-Term Devices <p class="infolinks">[<a href="javascript:toggleInfo('Karamlou2022QuantumNL','bibtex')">BibTeX</a>]</p></td>
+	<td>2022</td>
+	<td>ArXiv<br/>Vol. abs/2211.00727&nbsp;</td>
+	<td>article</td>
+	<td><a href="https://api.semanticscholar.org/CorpusID:253254972">URL</a>&nbsp;</td>
 </tr>
 <tr id="bib_Karamlou2022QuantumNL" class="bibtex noshow">
-<td><b>BibTeX</b>:
+<td colspan="6"><b>BibTeX</b>:
 <pre>
 @article{Karamlou2022QuantumNL,
   author = {Amin Karamlou and Marcel Pfaffhauser and James R. Wootton},
@@ -675,12 +1003,15 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 </pre></td>
 </tr>
 <tr id="Guarasci2022QuantumNL" class="entry">
-	<td>Guarasci R, Pietro GD and Esposito M (2022), <i>"Quantum Natural Language Processing: Challenges and Opportunities"</i>, Applied Sciences. 
-	<p class="infolinks"> [<a href="javascript:toggleInfo('Guarasci2022QuantumNL','bibtex')">BibTeX</a>] [<a href="https://api.semanticscholar.org/CorpusID:249333405" target="_blank">URL</a>]</p>
-	</td>
+	<td>Guarasci, R., Pietro, G.D. and Esposito, M.</td>
+	<td>Quantum Natural Language Processing: Challenges and Opportunities <p class="infolinks">[<a href="javascript:toggleInfo('Guarasci2022QuantumNL','bibtex')">BibTeX</a>]</p></td>
+	<td>2022</td>
+	<td>Applied Sciences&nbsp;</td>
+	<td>article</td>
+	<td><a href="https://api.semanticscholar.org/CorpusID:249333405">URL</a>&nbsp;</td>
 </tr>
 <tr id="bib_Guarasci2022QuantumNL" class="bibtex noshow">
-<td><b>BibTeX</b>:
+<td colspan="6"><b>BibTeX</b>:
 <pre>
 @article{Guarasci2022QuantumNL,
   author = {R. Guarasci and Giuseppe De Pietro and Massimo Esposito},
@@ -692,12 +1023,15 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 </pre></td>
 </tr>
 <tr id="Pandey2022PartsOS" class="entry">
-	<td>Pandey S, Dadure P, Nunsanga MVL and Pakray P (2022), <i>"Parts of speech tagging towards classical to quantum computing"</i>, 2022 IEEE Silchar Subsection Conference (SILCON). , pp. 1-6.
-	<p class="infolinks"> [<a href="javascript:toggleInfo('Pandey2022PartsOS','bibtex')">BibTeX</a>] [<a href="https://api.semanticscholar.org/CorpusID:256462967" target="_blank">URL</a>]</p>
-	</td>
+	<td>Pandey, S., Dadure, P., Nunsanga, M.V.L. and Pakray, P.</td>
+	<td>Parts of speech tagging towards classical to quantum computing <p class="infolinks">[<a href="javascript:toggleInfo('Pandey2022PartsOS','bibtex')">BibTeX</a>]</p></td>
+	<td>2022</td>
+	<td>2022 IEEE Silchar Subsection Conference (SILCON), pp. 1-6&nbsp;</td>
+	<td>article</td>
+	<td><a href="https://api.semanticscholar.org/CorpusID:256462967">URL</a>&nbsp;</td>
 </tr>
 <tr id="bib_Pandey2022PartsOS" class="bibtex noshow">
-<td><b>BibTeX</b>:
+<td colspan="6"><b>BibTeX</b>:
 <pre>
 @article{Pandey2022PartsOS,
   author = {Shyambabu Pandey and Pankaj Dadure and Morrel V. L. Nunsanga and Partha Pakray},
@@ -710,12 +1044,15 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 </pre></td>
 </tr>
 <tr id="Pandey2023QuantumML" class="entry">
-	<td>Pandey S, Basisth NJ, Sachan T, Kumari N and Pakray P (2023), <i>"Quantum machine learning for natural language processing application"</i>, Physica A: Statistical Mechanics and its Applications. 
-	<p class="infolinks"> [<a href="javascript:toggleInfo('Pandey2023QuantumML','bibtex')">BibTeX</a>] [<a href="https://api.semanticscholar.org/CorpusID:260719644" target="_blank">URL</a>]</p>
-	</td>
+	<td>Pandey, S., Basisth, N.J., Sachan, T., Kumari, N. and Pakray, P.</td>
+	<td>Quantum machine learning for natural language processing application <p class="infolinks">[<a href="javascript:toggleInfo('Pandey2023QuantumML','bibtex')">BibTeX</a>]</p></td>
+	<td>2023</td>
+	<td>Physica A: Statistical Mechanics and its Applications&nbsp;</td>
+	<td>article</td>
+	<td><a href="https://api.semanticscholar.org/CorpusID:260719644">URL</a>&nbsp;</td>
 </tr>
 <tr id="bib_Pandey2023QuantumML" class="bibtex noshow">
-<td><b>BibTeX</b>:
+<td colspan="6"><b>BibTeX</b>:
 <pre>
 @article{Pandey2023QuantumML,
   author = {Shyambabu Pandey and Nihar Jyoti Basisth and Tushar Sachan and Neha Kumari and Partha Pakray},
@@ -727,12 +1064,15 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 </pre></td>
 </tr>
 <tr id="Shi2023TwoEQ" class="entry">
-	<td>Shi J, Li Z, Lai WP, Li F, Shi R, Feng Y and Zhang S (2023), <i>"Two End-to-End Quantum-Inspired Deep Neural Networks for Text Classification"</i>, IEEE Transactions on Knowledge and Data Engineering.  Vol. 35, pp. 4335-4345.
-	<p class="infolinks"> [<a href="javascript:toggleInfo('Shi2023TwoEQ','bibtex')">BibTeX</a>] [<a href="https://api.semanticscholar.org/CorpusID:244666399" target="_blank">URL</a>]</p>
-	</td>
+	<td>Shi, J., Li, Z., Lai, W.P., Li, F., Shi, R., Feng, Y. and Zhang, S.</td>
+	<td>Two End-to-End Quantum-Inspired Deep Neural Networks for Text Classification <p class="infolinks">[<a href="javascript:toggleInfo('Shi2023TwoEQ','bibtex')">BibTeX</a>]</p></td>
+	<td>2023</td>
+	<td>IEEE Transactions on Knowledge and Data Engineering<br/>Vol. 35, pp. 4335-4345&nbsp;</td>
+	<td>article</td>
+	<td><a href="https://api.semanticscholar.org/CorpusID:244666399">URL</a>&nbsp;</td>
 </tr>
 <tr id="bib_Shi2023TwoEQ" class="bibtex noshow">
-<td><b>BibTeX</b>:
+<td colspan="6"><b>BibTeX</b>:
 <pre>
 @article{Shi2023TwoEQ,
   author = {Jinjing Shi and Zhenhuan Li and Wei Ping Lai and Fangfang Li and Ronghua Shi and Yanyan Feng and Shichao Zhang},
@@ -746,12 +1086,15 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 </pre></td>
 </tr>
 <tr id="Zhao2022QSANAN" class="entry">
-	<td>Zhao R, Shi J and Zhang S (2022), <i>"QSAN: A Near-term Achievable Quantum Self-Attention Network"</i>, ArXiv.  Vol. abs/2207.07563
-	<p class="infolinks"> [<a href="javascript:toggleInfo('Zhao2022QSANAN','bibtex')">BibTeX</a>] [<a href="https://api.semanticscholar.org/CorpusID:250607600" target="_blank">URL</a>]</p>
-	</td>
+	<td>Zhao, R., Shi, J. and Zhang, S.</td>
+	<td>QSAN: A Near-term Achievable Quantum Self-Attention Network <p class="infolinks">[<a href="javascript:toggleInfo('Zhao2022QSANAN','bibtex')">BibTeX</a>]</p></td>
+	<td>2022</td>
+	<td>ArXiv<br/>Vol. abs/2207.07563&nbsp;</td>
+	<td>article</td>
+	<td><a href="https://api.semanticscholar.org/CorpusID:250607600">URL</a>&nbsp;</td>
 </tr>
 <tr id="bib_Zhao2022QSANAN" class="bibtex noshow">
-<td><b>BibTeX</b>:
+<td colspan="6"><b>BibTeX</b>:
 <pre>
 @article{Zhao2022QSANAN,
   author = {Renteng Zhao and Jinjing Shi and Shenmin Zhang},
@@ -764,12 +1107,15 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 </pre></td>
 </tr>
 <tr id="Zhao2023QKSANAQ" class="entry">
-	<td>Zhao R, Shi J and Li X (2023), <i>"QKSAN: A Quantum Kernel Self-Attention Network"</i>, ArXiv.  Vol. abs/2308.13422
-	<p class="infolinks"> [<a href="javascript:toggleInfo('Zhao2023QKSANAQ','bibtex')">BibTeX</a>] [<a href="https://api.semanticscholar.org/CorpusID:261214827" target="_blank">URL</a>]</p>
-	</td>
+	<td>Zhao, R., Shi, J. and Li, X.</td>
+	<td>QKSAN: A Quantum Kernel Self-Attention Network <p class="infolinks">[<a href="javascript:toggleInfo('Zhao2023QKSANAQ','bibtex')">BibTeX</a>]</p></td>
+	<td>2023</td>
+	<td>ArXiv<br/>Vol. abs/2308.13422&nbsp;</td>
+	<td>article</td>
+	<td><a href="https://api.semanticscholar.org/CorpusID:261214827">URL</a>&nbsp;</td>
 </tr>
 <tr id="bib_Zhao2023QKSANAQ" class="bibtex noshow">
-<td><b>BibTeX</b>:
+<td colspan="6"><b>BibTeX</b>:
 <pre>
 @article{Zhao2023QKSANAQ,
   author = {Renteng Zhao and Jinjing Shi and Xuelong Li},
@@ -782,12 +1128,15 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 </pre></td>
 </tr>
 <tr id="Schuld2018QuantumML" class="entry">
-	<td>Schuld M and Killoran N (2018), <i>"Quantum Machine Learning in Feature Hilbert Spaces."</i>, Physical review letters.  Vol. 122 4, pp. 040504.
-	<p class="infolinks"> [<a href="javascript:toggleInfo('Schuld2018QuantumML','bibtex')">BibTeX</a>] [<a href="https://api.semanticscholar.org/CorpusID:73432134" target="_blank">URL</a>]</p>
-	</td>
+	<td>Schuld, M. and Killoran, N.</td>
+	<td>Quantum Machine Learning in Feature Hilbert Spaces. <p class="infolinks">[<a href="javascript:toggleInfo('Schuld2018QuantumML','bibtex')">BibTeX</a>]</p></td>
+	<td>2018</td>
+	<td>Physical review letters<br/>Vol. 122 4, pp. 040504&nbsp;</td>
+	<td>article</td>
+	<td><a href="https://api.semanticscholar.org/CorpusID:73432134">URL</a>&nbsp;</td>
 </tr>
 <tr id="bib_Schuld2018QuantumML" class="bibtex noshow">
-<td><b>BibTeX</b>:
+<td colspan="6"><b>BibTeX</b>:
 <pre>
 @article{Schuld2018QuantumML,
   author = {Maria Schuld and Nathan Killoran},
@@ -801,12 +1150,15 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 </pre></td>
 </tr>
 <tr id="Aerts2017TowardsAQ" class="entry">
-	<td>Aerts D, Argu&euml;lles JA, Beltran L, Beltran L, Distrito I, de Bianchi MS, Sozzo S and Veloz T (2017), <i>"Towards a Quantum World Wide Web"</i>, Theor. Comput. Sci..  Vol. 752, pp. 116-131.
-	<p class="infolinks"> [<a href="javascript:toggleInfo('Aerts2017TowardsAQ','bibtex')">BibTeX</a>] [<a href="https://api.semanticscholar.org/CorpusID:18849734" target="_blank">URL</a>]</p>
-	</td>
+	<td>Aerts, D., Argu&euml;lles, J.A., Beltran, L., Beltran, L., Distrito, I., de Bianchi, M.S., Sozzo, S. and Veloz, T.</td>
+	<td>Towards a Quantum World Wide Web <p class="infolinks">[<a href="javascript:toggleInfo('Aerts2017TowardsAQ','bibtex')">BibTeX</a>]</p></td>
+	<td>2017</td>
+	<td>Theor. Comput. Sci.<br/>Vol. 752, pp. 116-131&nbsp;</td>
+	<td>article</td>
+	<td><a href="https://api.semanticscholar.org/CorpusID:18849734">URL</a>&nbsp;</td>
 </tr>
 <tr id="bib_Aerts2017TowardsAQ" class="bibtex noshow">
-<td><b>BibTeX</b>:
+<td colspan="6"><b>BibTeX</b>:
 <pre>
 @article{Aerts2017TowardsAQ,
   author = {Diederik Aerts and Jonito Aerts Argu&euml;lles and Lester Beltran and Lyneth Beltran and Isaac Distrito and Massimiliano Sassoli de Bianchi and Sandro Sozzo and Tom&aacute;s Veloz},
@@ -820,12 +1172,15 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 </pre></td>
 </tr>
 <tr id="Aerts2021AreWT" class="entry">
-	<td>Aerts D and Beltran L (2021), <i>"Are Words the Quanta of Human Language? Extending the Domain of Quantum Cognition"</i>, Entropy.  Vol. 24
-	<p class="infolinks"> [<a href="javascript:toggleInfo('Aerts2021AreWT','bibtex')">BibTeX</a>] [<a href="https://api.semanticscholar.org/CorpusID:238583562" target="_blank">URL</a>]</p>
-	</td>
+	<td>Aerts, D. and Beltran, L.</td>
+	<td>Are Words the Quanta of Human Language? Extending the Domain of Quantum Cognition <p class="infolinks">[<a href="javascript:toggleInfo('Aerts2021AreWT','bibtex')">BibTeX</a>]</p></td>
+	<td>2021</td>
+	<td>Entropy<br/>Vol. 24&nbsp;</td>
+	<td>article</td>
+	<td><a href="https://api.semanticscholar.org/CorpusID:238583562">URL</a>&nbsp;</td>
 </tr>
 <tr id="bib_Aerts2021AreWT" class="bibtex noshow">
-<td><b>BibTeX</b>:
+<td colspan="6"><b>BibTeX</b>:
 <pre>
 @article{Aerts2021AreWT,
   author = {Diederik Aerts and Lester Beltran},
@@ -838,12 +1193,15 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 </pre></td>
 </tr>
 <tr id="Aerts2022APR" class="entry">
-	<td>Aerts D and Beltran L (2022), <i>"A Planck Radiation and Quantization Scheme for Human Cognition and Language"</i>, Frontiers in Psychology.  Vol. 13
-	<p class="infolinks"> [<a href="javascript:toggleInfo('Aerts2022APR','bibtex')">BibTeX</a>] [<a href="https://api.semanticscholar.org/CorpusID:245837675" target="_blank">URL</a>]</p>
-	</td>
+	<td>Aerts, D. and Beltran, L.</td>
+	<td>A Planck Radiation and Quantization Scheme for Human Cognition and Language <p class="infolinks">[<a href="javascript:toggleInfo('Aerts2022APR','bibtex')">BibTeX</a>]</p></td>
+	<td>2022</td>
+	<td>Frontiers in Psychology<br/>Vol. 13&nbsp;</td>
+	<td>article</td>
+	<td><a href="https://api.semanticscholar.org/CorpusID:245837675">URL</a>&nbsp;</td>
 </tr>
 <tr id="bib_Aerts2022APR" class="bibtex noshow">
-<td><b>BibTeX</b>:
+<td colspan="6"><b>BibTeX</b>:
 <pre>
 @article{Aerts2022APR,
   author = {Diederik Aerts and Lester Beltran},
@@ -856,12 +1214,15 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 </pre></td>
 </tr>
 <tr id="Plotnitsky2022MostTS" class="entry">
-	<td>Plotnitsky A (2022), <i>"“Most tantumising state of affairs”: Mathematical and non-mathematical in quantum-like understanding of thinking"</i>, Frontiers in Psychology.  Vol. 13
-	<p class="infolinks"> [<a href="javascript:toggleInfo('Plotnitsky2022MostTS','bibtex')">BibTeX</a>] [<a href="https://api.semanticscholar.org/CorpusID:252204479" target="_blank">URL</a>]</p>
-	</td>
+	<td>Plotnitsky, A.</td>
+	<td>“Most tantumising state of affairs”: Mathematical and non-mathematical in quantum-like understanding of thinking <p class="infolinks">[<a href="javascript:toggleInfo('Plotnitsky2022MostTS','bibtex')">BibTeX</a>]</p></td>
+	<td>2022</td>
+	<td>Frontiers in Psychology<br/>Vol. 13&nbsp;</td>
+	<td>article</td>
+	<td><a href="https://api.semanticscholar.org/CorpusID:252204479">URL</a>&nbsp;</td>
 </tr>
 <tr id="bib_Plotnitsky2022MostTS" class="bibtex noshow">
-<td><b>BibTeX</b>:
+<td colspan="6"><b>BibTeX</b>:
 <pre>
 @article{Plotnitsky2022MostTS,
   author = {Arkady Plotnitsky},
@@ -874,12 +1235,15 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 </pre></td>
 </tr>
 <tr id="Aerts2022QuantumSI" class="entry">
-	<td>Aerts D and Arguelles JA (2022), <i>"Quantum Structure in Human Perception"</i>, ArXiv.  Vol. abs/2208.03726
-	<p class="infolinks"> [<a href="javascript:toggleInfo('Aerts2022QuantumSI','bibtex')">BibTeX</a>] [<a href="https://api.semanticscholar.org/CorpusID:251402982" target="_blank">URL</a>]</p>
-	</td>
+	<td>Aerts, D. and Arguelles, J.A.</td>
+	<td>Quantum Structure in Human Perception <p class="infolinks">[<a href="javascript:toggleInfo('Aerts2022QuantumSI','bibtex')">BibTeX</a>]</p></td>
+	<td>2022</td>
+	<td>ArXiv<br/>Vol. abs/2208.03726&nbsp;</td>
+	<td>article</td>
+	<td><a href="https://api.semanticscholar.org/CorpusID:251402982">URL</a>&nbsp;</td>
 </tr>
 <tr id="bib_Aerts2022QuantumSI" class="bibtex noshow">
-<td><b>BibTeX</b>:
+<td colspan="6"><b>BibTeX</b>:
 <pre>
 @article{Aerts2022QuantumSI,
   author = {Diederik Aerts and Jonito Aerts Arguelles},
@@ -892,31 +1256,38 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 </pre></td>
 </tr>
 <tr id="Busemeyer2012QuantumMO" class="entry">
-	<td>Busemeyer JR and Bruza P (2012), <i>"Quantum Models of Cognition and Decision"</i> 
-	<p class="infolinks"> [<a href="javascript:toggleInfo('Busemeyer2012QuantumMO','bibtex')">BibTeX</a>] [<a href="https://api.semanticscholar.org/CorpusID:9199120" target="_blank">URL</a>]</p>
-	</td>
+	<td>Busemeyer, J.R. and Bruza, P.D.</td>
+	<td>Quantum Models of Cognition and Decision <p class="infolinks">[<a href="javascript:toggleInfo('Busemeyer2012QuantumMO','bibtex')">BibTeX</a>]</p></td>
+	<td>2012</td>
+	<td>&nbsp;</td>
+	<td>book</td>
+	<td><a href="https://www.cambridge.org/core/books/quantum-models-of-cognition-and-decision/75909428F710F7C6AF7D580CB83443AC">URL</a>&nbsp;</td>
 </tr>
 <tr id="bib_Busemeyer2012QuantumMO" class="bibtex noshow">
-<td><b>BibTeX</b>:
+<td colspan="6"><b>BibTeX</b>:
 <pre>
-@inproceedings{Busemeyer2012QuantumMO,
-  author = {Jerome R. Busemeyer and Peter Bruza},
+@book{Busemeyer2012QuantumMO,
+  author = {Jerome R. Busemeyer and Peter D. Bruza},
   title = {Quantum Models of Cognition and Decision},
+  publisher = {Cambridge University Press},
   year = {2012},
-  url = {https://api.semanticscholar.org/CorpusID:9199120}
+  url = {https://www.cambridge.org/core/books/quantum-models-of-cognition-and-decision/75909428F710F7C6AF7D580CB83443AC}
 }
 </pre></td>
 </tr>
 <tr id="YEARSLEY201699" class="entry">
-	<td>Yearsley JM and Busemeyer JR (2016), <i>"Quantum cognition and decision theories: A tutorial"</i>, Journal of Mathematical Psychology.  Vol. 74, pp. 99-116.
-	<p class="infolinks">[<a href="javascript:toggleInfo('YEARSLEY201699','abstract')">Abstract</a>] [<a href="javascript:toggleInfo('YEARSLEY201699','bibtex')">BibTeX</a>] [<a href="https://doi.org/10.1016/j.jmp.2015.11.005" target="_blank">DOI</a>] [<a href="https://www.sciencedirect.com/science/article/pii/S0022249615000772" target="_blank">URL</a>]</p>
-	</td>
+	<td>Yearsley, J.M. and Busemeyer, J.R.</td>
+	<td>Quantum cognition and decision theories: A tutorial <p class="infolinks">[<a href="javascript:toggleInfo('YEARSLEY201699','abstract')">Abstract</a>] [<a href="javascript:toggleInfo('YEARSLEY201699','bibtex')">BibTeX</a>]</p></td>
+	<td>2016</td>
+	<td>Journal of Mathematical Psychology<br/>Vol. 74, pp. 99-116&nbsp;</td>
+	<td>article</td>
+	<td><a href="https://doi.org/10.1016/j.jmp.2015.11.005">DOI</a> <a href="https://www.sciencedirect.com/science/article/pii/S0022249615000772">URL</a>&nbsp;</td>
 </tr>
 <tr id="abs_YEARSLEY201699" class="abstract noshow">
-	<td><b>Abstract</b>: Models of cognition and decision making based on quantum theory have been the subject of much interest recently. Quantum theory provides an alternative probabilistic framework for modelling decision making compared with classical probability theory, and has been successfully used to address behaviour considered paradoxical or irrational from a classical point of view. The purpose of this tutorial is to give an introduction to quantum models, with a particular emphasis on how to build these models in practice. Examples are provided by the study of order effects on judgements, and we will show how order effects arise from the structure of the theory. In particular, we show how to derive the recent discovery of a particular constraint on order effects implied by quantum models, called the Quantum Question (QQ) Equality, which does not appear to be derivable from alternative accounts, and which has been experimentally verified to high precision. However the general theory and methods of model construction we will describe are applicable to any quantum cognitive model. Our hope is that this tutorial will give researchers the confidence to construct simple quantum models of their own, particularly with a view to testing these against existing cognitive theories.</td>
+	<td colspan="6"><b>Abstract</b>: Models of cognition and decision making based on quantum theory have been the subject of much interest recently. Quantum theory provides an alternative probabilistic framework for modelling decision making compared with classical probability theory, and has been successfully used to address behaviour considered paradoxical or irrational from a classical point of view. The purpose of this tutorial is to give an introduction to quantum models, with a particular emphasis on how to build these models in practice. Examples are provided by the study of order effects on judgements, and we will show how order effects arise from the structure of the theory. In particular, we show how to derive the recent discovery of a particular constraint on order effects implied by quantum models, called the Quantum Question (QQ) Equality, which does not appear to be derivable from alternative accounts, and which has been experimentally verified to high precision. However the general theory and methods of model construction we will describe are applicable to any quantum cognitive model. Our hope is that this tutorial will give researchers the confidence to construct simple quantum models of their own, particularly with a view to testing these against existing cognitive theories.</td>
 </tr>
 <tr id="bib_YEARSLEY201699" class="bibtex noshow">
-<td><b>BibTeX</b>:
+<td colspan="6"><b>BibTeX</b>:
 <pre>
 @article{YEARSLEY201699,
   author = {James M. Yearsley and Jerome R. Busemeyer},
@@ -927,14 +1298,14 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
   pages = {99-116},
   note = {Foundations of Probability Theory in Psychology and Beyond},
   url = {https://www.sciencedirect.com/science/article/pii/S0022249615000772},
-  doi = {10.1016/j.jmp.2015.11.005}
+  doi = {https://doi.org/10.1016/j.jmp.2015.11.005}
 }
 </pre></td>
 </tr>
 </tbody>
 </table>
 <footer>
- <small>Created by <a href="http://jabref.sourceforge.net">JabRef</a> on 08/03/2024.</small>
+ <small>Created by <a href="http://jabref.sourceforge.net">JabRef</a> on 03/10/2026.</small>
 </footer>
 <!-- file generated by JabRef -->
 </body>
