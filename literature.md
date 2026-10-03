@@ -10,7 +10,7 @@ Last change: [Damir Cavar], 2026-10-02
 - Bernhardt, Chris (2020) [Quantum Computing for Everyone](https://mitpress.mit.edu/9780262539531/quantum-computing-for-everyone/). The MIT Press.
 - Coecke, Bob, and Stefano Gogioso (2023) [Quantum in Pictures: A New Way to Understand the Quantum World](https://www.quantinuum.com/news/quantum-in-pictures), Quantinuum.
 - Coecke, Bob, and Aleks Kissinger (2017) [Picturing Quantum Processes: A First Course in Quantum Theory and Diagrammatic Reasoning](https://www.cambridge.org/core/books/picturing-quantum-processes/1119568B3101F3A685BE832FEEC53E52), Cambridge University Press.
-- Combarro, Elías F., and Samuel González-Castillo (2023) A Practical Guide to Quantum Machine Learning and Quantum Optimization. Packt Publishing. ([GitHub repo](https://github.com/PacktPublishing/A-Practical-Guide-to-Quantum-Machine-Learning-and-Quantum-Optimization))
+- Combarro, Elías F., and Samuel González-Castillo (2023) [A Practical Guide to Quantum Machine Learning and Quantum Optimization](https://www.amazon.com/dp/1804613835). Packt Publishing. ([GitHub repo](https://github.com/PacktPublishing/A-Practical-Guide-to-Quantum-Machine-Learning-and-Quantum-Optimization))
 - Freericks, James K. (2026) [Quantum Mechanics Done Right: The Shortest Path from Novice to Researcher](https://link.springer.com/book/10.1007/978-3-031-87845-9). Springer Cham.
 - Hughes, Ciaran, et al. (2021) [Quantum Computing for the Quantum Curious](https://archive.org/details/oapen-20.500.12657-48236). Springer. Open Access, free download.
 - Johnston, Eric R., Nic Harrigan, Mercedes Gimeno-Segovia (2019) [Programming Quantum Computers](https://www.oreilly.com/library/view/programming-quantum-computers/9781492039679/). O'Reilly Media, Inc.
