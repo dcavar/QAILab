@@ -24,6 +24,15 @@ The topics to discuss, papers to read, or presentations to listen to during Fall
 |            | Training AI models for molecular structure generation and Quantum Circuit for ground-state optimization |
 | 09/03/2026 | Classical and Quantum Embeddings - [CBIRD](/cbird) Project - Model Training |
 |            | Training AI models for molecular structure generation and Quantum Circuit for ground-state optimization |
+| 09/10/2026 | Classical and Quantum Embeddings - [CBIRD](/cbird) Project - Model Training |
+|            | Training AI models for molecular structure generation and Quantum Circuit for ground-state optimization |
+| 09/17/2026 | Classical and Quantum Embeddings - [CBIRD](/cbird) Project - Model Training |
+|            | Training AI models for molecular structure generation and Quantum Circuit for ground-state optimization |
+| 09/24/2026 | Classical and Quantum Embeddings - [CBIRD](/cbird) Project - Model Training |
+|            | Training AI models for molecular structure generation and Quantum Circuit for ground-state optimization |
+| 10/01/2026 | Classical and Quantum Embeddings - [CBIRD](/cbird) Project - Downstream application experiments and evaluation |
+| 10/08/2026 | Classical and Quantum Embeddings - [CBIRD](/cbird) Project - Downstream application experiments and evaluation - Intro to specific quantum computation |
+| 10/15/2026 | [CBIRD](/cbird) adding symbolic layers - Intro to specific quantum computation |
 | ... | |
 
 
