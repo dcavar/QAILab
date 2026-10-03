@@ -15,8 +15,10 @@ Last change: [Damir Cavar], 2026-10-02
 - Hughes, Ciaran, et al. (2021) [Quantum Computing for the Quantum Curious](https://archive.org/details/oapen-20.500.12657-48236). Springer. Open Access, free download.
 - Johnston, Eric R., Nic Harrigan, Mercedes Gimeno-Segovia (2019) [Programming Quantum Computers](https://www.oreilly.com/library/view/programming-quantum-computers/9781492039679/). O'Reilly Media, Inc.
 - Luongo, Alessandro (2023) [Quantum algorithms for data analysis](https://quantumalgorithms.org/).
-- Nielsen, Michael A., and Isaac L. Chuang. [Quantum Computation and Quantum Information](https://www.cambridge.org/highereducation/books/quantum-computation-and-quantum-information/01E10196D0A682A6AEFFEA52D53BE9AE#overview): 10th Anniversary Edition. Cambridge: Cambridge University Press, 2010. 
+- Nielsen, Michael A., and Isaac L. Chuang. [Quantum Computation and Quantum Information](https://www.cambridge.org/highereducation/books/quantum-computation-and-quantum-information/01E10196D0A682A6AEFFEA52D53BE9AE#overview): 10th Anniversary Edition. Cambridge: Cambridge University Press, 2010.
+- Pastorello, Davide (2023) [Concise Guide to Quantum Machine Learning](https://link.springer.com/book/10.1007/978-981-19-6897-6). Springer.
 - Rudolph, Terry (2017) [Q is for Quantum: Quantum mechanics for those who only know basic arithmetic](https://www.qisforquantum.org/).
+-  Schuld, Maria, and Francesco Petruccione (2021) [Machine Learning with Quantum Computers](https://link.springer.com/book/10.1007/978-3-030-83098-4). Springer.
 - Sutor, Robert S. (2019) [Dancing with Qubits: How quantum computing works and how it can change the world](https://www.packtpub.com/en-us/product/dancing-with-qubits-9781838827366). Packt Publishing. ([GitHub repo](https://github.com/PacktPublishing/Dancing-with-Qubits-2E))
 - Watrous, John (2025) [Understanding Quantum Information and Computation](https://arxiv.org/abs/2507.11536). [arXiv:2507.11536](https://arxiv.org/abs/2507.11536).
 - Weaver, James L., Frank J. Harkins (2022) [Qiskit Pocket Guide](https://www.oreilly.com/library/view/qiskit-pocket-guide/9781098112462/part01.html). O'Reilly Media, Inc. ([GitHub repo](https://github.com/qiskit-community/qiskit-pocket-guide))
